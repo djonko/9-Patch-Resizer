@@ -95,7 +95,10 @@ public class ImageScaler extends SwingWorker<Void, Operation> {
         File outputFolder;
 
         synchronized (folderLock) {
-          outputFolder = new File(parent, "drawable-"
+        	//old android framwork
+          //outputFolder = new File(parent, "drawable-"
+        	//new    android framework
+        	outputFolder = new File(parent, "mipmap-"
                                           + density.getName());
           if (!outputFolder.exists()) {
             outputFolder.mkdir();
